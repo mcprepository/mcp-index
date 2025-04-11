@@ -1,6 +1,6 @@
 {
   "name": "mcp-index",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,7 @@
     "MCPRepository",
     "mcp cli"
   ],
+  "homepage": "https://mcprepository.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/mcprepository/mcp-index"
