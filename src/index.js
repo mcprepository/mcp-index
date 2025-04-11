@@ -17,6 +17,14 @@ export default async function cli() {
                 const response = await axios.post("https://mcprepository.com/api/index", { url });
                 const data = response.data;
 
+                if (data.valid === false) {
+                    console.log(chalk.red("❌ This URL does not point to a valid GitHub repository."));
+                    if (data.reason) {
+                        console.log(chalk.gray(`Reason: ${data.reason}`));
+                    }
+                    process.exit(1);
+                }
+
                 console.log(chalk.green("✅ Index request submitted successfully!"));
 
                 if (data.url) {
